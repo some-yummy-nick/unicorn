@@ -1,0 +1,19 @@
+{
+  "name": "new",
+  "authors": [
+    "Marat"
+  ],
+  "homepage": "https://github.com/yeffasol/new",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libraries/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "latest"
+  }
+}
