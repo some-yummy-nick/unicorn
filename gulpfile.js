@@ -4,11 +4,9 @@ sync = require('browser-sync').create(),
   runSequence = require('run-sequence'),
   gulpIf = require('gulp-if'),
   fileInclude = require('gulp-file-include'),
-  useref = require('gulp-useref'),
   htmlmin = require('gulp-htmlmin'),
   uglify = require('gulp-uglify'),
   gutil = require('gulp-util'),
-  wiredep = require('wiredep').stream,
   sourcemaps = require('gulp-sourcemaps'),
   plumber = require('gulp-plumber'),
   sass = require('gulp-sass'),
@@ -18,7 +16,6 @@ sync = require('browser-sync').create(),
   svgmin = require('gulp-svgmin'),
   svgstore = require('gulp-svgstore'),
   favicons = require("gulp-favicons"),
-  cache = require('gulp-cache'),
   imagemin = require('gulp-imagemin'),
   jpegtran = require('imagemin-jpegtran'),
   optipng = require('imagemin-optipng'),
@@ -68,13 +65,6 @@ gulp.task('html', () => {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(wiredep({
-      optional: 'configuration',
-      goes: 'here'
-    }))
-    .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulpIf(NODE_ENV === 'production',
       htmlmin({collapseWhitespace: true})
     ))
@@ -161,7 +151,7 @@ gulp.task('server', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/html/**/*.html', ['html']);
-  gulp.watch('src/styles/**/*.scss', ['styles']);
+  gulp.watch('src/**/*.scss', ['styles']);
   gulp.watch(assets, ['copy']);
 });
 
@@ -173,7 +163,7 @@ gulp.task("favicons", function () {
   return gulp.src("src/images/logo.png").pipe(favicons({
     appName: "My App",
     appDescription: "This is my application",
-    developerName: "Marat shaymardanov",
+    developerName: "Marat Shaymardanov",
     developerURL: "http://tatarchap.p-host.in/",
     background: "#020307",
     path: "favicons/",
