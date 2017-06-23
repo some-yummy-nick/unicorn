@@ -68,6 +68,13 @@
   }
 }
 
+@mixin marginBottom($margin-bottom:20px) {
+  margin-bottom: $margin-bottom;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 @mixin absoluteCenter {
   display: block;
   position: absolute;

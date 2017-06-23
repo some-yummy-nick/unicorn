@@ -8,7 +8,6 @@
     "webpackbuild": "webpack -p",
     "dest": "gulp build",
     "deploy": "gh-pages -d dest",
-    "sprite": "svg-sprite-generate -d ./src/images/svg/ -o ./src/images/sprite.svg",
     "gulp": "gulp"
   },
   "devDependencies": {
