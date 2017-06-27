@@ -49,7 +49,7 @@ let processors = [
     'src/fonts{,/**}',
     '!src/html{,/**}',
     '!src/styles{,/**}',
-    '!src/scripts/script.js',
+    '!src/js/script.js',
   ],
   NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -152,6 +152,7 @@ gulp.task('server', () => {
 gulp.task('watch', () => {
   gulp.watch('src/html/**/*.html', ['html']);
   gulp.watch('src/**/*.scss', ['styles']);
+  gulp.watch('src/**/*.+(jpg|JPG|png|svg)', ['images']);
   gulp.watch(assets, ['copy']);
 });
 

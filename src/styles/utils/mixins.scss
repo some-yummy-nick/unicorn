@@ -12,22 +12,18 @@
 
 
 @mixin container {
-  width: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  width: 97%;
   margin-right:  auto;
   margin-left: auto;
   max-width: 1300px;
   @media ($tablet-widths) {
-    padding-right: 0;
-    padding-left: 0;
-    width: 640px;
+    max-width: 640px;
   }
   @media ($desktop-widths) {
-    width: 960px;
+    max-width: 960px;
   }
   @media ($large-widths) {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 

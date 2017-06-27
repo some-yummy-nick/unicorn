@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "set NODE_ENV=production&&npm run dest&&npm run webpackbuild",
+    "prod": "set NODE_ENV=production&&npm run dest&&npm run webpackbuild",
     "start": "parallelshell \"npm run gulp\" \"npm run webpack\"",
     "webpack": "webpack",
     "webpackbuild": "webpack -p",
@@ -18,8 +19,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "browser-sync": "latest",
+    "css-loader": "^0.28.4",
     "css-mqpacker": "^6.0.0",
     "del": "latest",
+    "extract-text-webpack-plugin": "^2.1.2",
     "fontawesome-scss": "^2.0.4",
     "gh-pages": "^1.0.0",
     "gulp": "latest",
@@ -59,11 +62,15 @@
     "postcss-rgb-plz": "^2.0.2",
     "postcss-sorting": "^1.7.0",
     "run-sequence": "^1.2.2",
+    "style-loader": "^0.18.2",
     "webpack": "^3.0.0"
   },
   "browserslist": [
     "last 10 versions",
     ">5%",
     "IE 10"
-  ]
+  ],
+  "dependencies": {
+    "flickity": "^2.0.8"
+  }
 }

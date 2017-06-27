@@ -9,16 +9,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
   <script>WebFont.load({
     google: {
-      families: ["PT Sans:400,700"],
-      custom: {
-        families: ['Oswald']
-      }
+      families: ["Source Sans Pro:400,600,700,900"]
     }
   });</script>
   <noscript><span class="noscript">У Вас отключён JavaScript...Пожалуйста включите в его в настройках</span>
   </noscript>
   <!--FAVICONS-->
   @@include('../components/favicon.html')<!--FAVICONS END-->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!--VENDOR CSS-->
+  <link rel="stylesheet" type="text/css" href="styles/vendor.css" media="screen, projection, print"><!--VENDOR CSS END-->
   <!--MAIN CSS-->
   <link rel="stylesheet" type="text/css" href="styles/style.css" media="screen, projection, print"><!--MAIN CSS END-->
   <!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/ svn/trunk/html5.js"></script><![endif]-->
@@ -30,10 +30,17 @@
   <div class="content">
     <!--HEADER-->
     @@include('../blocks/header/header.html')<!--HEADER END-->
+    <!--ABOUT-->
+    @@include('../blocks/about/about.html')<!--ABOUT END-->
+    <!--ADVANTAGES-->
+    @@include('../blocks/advantages/advantages.html')<!--ADVANTAGES END-->
+    <!--FEATURE-->
+    @@include('../blocks/feature/feature.html')<!--FEATURE END-->
   </div>
   <!--FOOTER-->
   @@include('../blocks/footer/footer.html')<!--FOOTER END-->
 </div>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>
