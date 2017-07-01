@@ -1,0 +1,75 @@
+.slider{
+  overflow: hidden;
+  &__item{
+    position: relative;
+    width: 368px !important;
+    height: 368px;
+    @include marginRight();
+    padding: 50px 35px;
+    text-align: left;
+    background-color: #222;
+    color: #eee;
+    &[aria-hidden="false"]{
+      &::after{
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75px;
+        height: 7px;
+        background-color: #e64a19;
+      }
+    }
+  }
+  &__type{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__text{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+  }
+  &__block{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+  }
+  &__name{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__image{
+    margin-right: 20px;
+  }
+
+  &__time{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+.bx-wrapper{
+  box-shadow: none;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.bx-wrapper .bx-next{
+  right: -70px;
+  background: inline('../../src/images/base64/right-arrow.png');
+}
+.bx-wrapper .bx-prev{
+  left: -70px;
+  background: inline('../../src/images/base64/left-arrow.png');
+}
+.bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover{
+  background-position: 0;
+}

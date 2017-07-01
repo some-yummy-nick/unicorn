@@ -96,10 +96,13 @@ p {
 }
 
 section,.section {
+  text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
+.section--color{
+  background-color: $background-color;
+}
 .section__title {
   position: relative;
   font-size: 27px;

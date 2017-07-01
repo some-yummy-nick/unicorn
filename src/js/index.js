@@ -2,9 +2,16 @@ import hamburger from "./hamburger";
 import links from "./links";
 hamburger();
 links();
-var flkty = new Flickity('.slider', {
-  freeScroll: true,
-  cellAlign: 'left',
-  pageDots: false,
-  adaptiveHeight: true
+$(document).ready(function(){
+  $('.feature .slider').bxSlider({
+    hideControlOnEnd: true,
+    slidesWidth:360,
+    pager: false,
+    infiniteLoop: false
+  });
+  $('.clients__slider').bxSlider({
+    hideControlOnEnd: true,
+    pager: false,
+    infiniteLoop: false
+  });
 });
